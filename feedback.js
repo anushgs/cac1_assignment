@@ -56,7 +56,6 @@ validatePassword = (password) => {
         count++;
       }
     }
-
     let color = "";
 
     let strength = "";

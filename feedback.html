@@ -3,9 +3,9 @@
   <html>
     <head>
       <meta charset="utf-8" />
-
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <title>Student Feedback</title>
+      <link rel="icon" type="image/x-icon" href="Assests/favicon-32x32.png">
       <meta name="description" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <!-- google fonts -->
@@ -39,10 +39,10 @@
     </head>
     <body>
       <section class="feedbackForm" id="myFeedbackForm">
-        
+        <h3>Tell us about Your Experience  at Christ University</h3>
         <!-- First name input  -->
         <form class="row g-3 needs-validation myform" novalidate>
-          <h3>Tell us about Your Experience  at Christ University</h3>
+          
           <div class="col-md-4">
             <label for="validationCustom01" class="form-label">First name</label>
             <input type="text" class="form-control" id="validationCustom01"  onkeypress = "onlyChar()"required>
@@ -130,8 +130,7 @@
               class="form-control"
               id="validationCustom05"
               onkeypress="return onlyDigits (event)"
-              required
-            />
+              required/>
             <div class="invalid-feedback">Please provide a valid zip.</div>
           </div>
           <!--CheckBoxex-->
@@ -142,11 +141,8 @@
                 type="checkbox"
                 class="form-check-input"
                 value=""
-                id="Students"
-                
-              />
+                id="Students"/>
               <label class="form-check-label" for="Students">Students</label>
-             
               <input type="checkbox" class="form-check-input" id="Location" />
               <label class="form-check-label" for="Location">Location</label>
 
@@ -155,13 +151,11 @@
 
               <input type="checkbox" class="form-check-input" id="Atmosphere" />
               <label class="form-check-label" for="Atmosphere">
-                Atmosphere</label
-              >
+                Atmosphere</label>
 
               <input type="checkbox" class="form-check-input" id="Dorm Rooms" />
               <label class="form-check-label" for="Dorm Rooms">
-                Dorm Rooms</label
-              >
+                Dorm Rooms</label>
 
               <input type="checkbox" class="form-check-input" id="Sports" />
               <label class="form-check-label" for="Sports">Sports</label>
@@ -169,7 +163,7 @@
             </div>
           </div>
           <div class="col-md-12">
-            <h5>Where did hear us</h5>
+            <h5>Where did you hear us</h5>
 
             <div class="form-check">
               <input
@@ -242,8 +236,7 @@
                 required
               />
               <label class="form-check-label" for="validationFormCheck2"
-                >other</label
-              >
+                >other</label>
             </div>
           </div>
           <!--Text Area-->
@@ -305,32 +298,27 @@
               class="btn btn-primary"
               type="submit"
               id="mybutton"
-              disabled
-            >
+              disabled>
               Submit form
             </button>
             <button
             class="btn btn-secondary"
             id="resetbutton"
-            onclick = resetForm()
-           
-          >
+            onclick = resetForm()>
             Clear Form
           </button>
           </div>
-
         </form>
-        
+        <!-- Successfully submiited card -->
       </section>
        <div class="onsubcard" id ="successfulcard">
         <div class="card">
-          <img class="card-img-top" src="success.gif" alt="Card image cap" />
+          <img class="card-img-top" src="Assests/success.gif" alt="Card image cap" />
           <div class="card-body">
             <h3 class="card-title">Submitted Successfully</h3>
             <div class="returnLink">
               <a href="feedback.html" class="btn btn-secondary"
-                >Submit New Form</a
-              >
+                >Submit New Form</a>
             </div>
           </div>
         </div>
@@ -341,10 +329,8 @@
     <script>
       (function () {
         "use strict";
-
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
         var forms = document.querySelectorAll(".needs-validation");
-
         // Loop over them and prevent submission
         Array.prototype.slice.call(forms).forEach(function (form) {
           form.addEventListener(
@@ -353,21 +339,16 @@
               if (!form.checkValidity()) {
                 event.preventDefault();
                 event.stopPropagation();
-               console.log("???")
               }
-
               form.classList.add("was-validated");
               if(form.checkValidity()){
-                event.preventDefault();
+                event.preventDefault();                
+                //Showing successfully submitted msg
               document.getElementById("myFeedbackForm").className = "feedbackForm hide"
               document.getElementById("successfulcard").className = "onsubcard show"
-              }
-              
-              
+              }  
             },
             false,
-            console.log("maybe here")
-            
           );
         });
       })();
