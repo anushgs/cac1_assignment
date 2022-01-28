@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-image: url("university_img.jpg");
+}
+
+.feedbackForm {
+  margin: auto;
+  width: 50%;
+
+  padding: 10px;
+  background: #e9ecef;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+  margin-bottom: 0px;
+}
+.feedbackForm.hide {
+  visibility: hidden;
+  display: none;
+}
+.onsubcard {
+  visibility: hidden;
+  display: none;
+  margin: auto;
+  width: 30%;
+
+  background: #e9ecef;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  margin-top: 100px;
+}
+.onsubcard h3 {
+  text-align: center;
+}
+.returnLink {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.onsubcard.show {
+  visibility: visible;
+  display: inline-block;
+  margin: auto;
+  width: 30%;
+
+  background: #e9ecef;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  margin-left: 35%;
+  margin-top: 100px;
+}
+
+.feedbackForm h3 {
+  color: #0b3f64;
+  text-align: center;
+  padding-top: 12px;
+  font-weight: bold;
+}
+.myform {
+  padding: 20px;
+}
+span {
+  font-size: 15px;
+  font-weight: lighter;
+}
+.showmsg {
+  visibility: hidden;
+  display: none;
+}
+.showmsg.success {
+  visibility: visible;
+  display: inline-block;
+  color: green;
+}
+.showmsg.error {
+  visibility: visible;
+  display: inline-block;
+  color: red;
+}
